@@ -3,35 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Wall</title>
+    <title>Interactive Wall with Modal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wall">
-        <div class="frame" onclick="showContent(1)">
+        <div class="frame" onclick="openModal(1)">
             <img src="images/frame1.jpg" alt="Picture 1">
         </div>
-        <div class="frame" onclick="showContent(2)">
+        <div class="frame" onclick="openModal(2)">
             <img src="images/frame2.jpg" alt="Picture 2">
         </div>
         <!-- Add more frames as needed -->
     </div>
 
-    <!-- Hidden content for each frame -->
-    <div id="content1" class="content">
-        <audio controls>
-            <source src="audio/audio1.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <p class="transcript">This is the transcript for audio 1.</p>
-    </div>
-
-    <div id="content2" class="content">
-        <audio controls>
-            <source src="audio/audio2.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <p class="transcript">This is the transcript for audio 2.</p>
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-audio"></div>
+            <p id="modal-transcript"></p>
+        </div>
     </div>
 
     <script src="app.js"></script>
