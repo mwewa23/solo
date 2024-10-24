@@ -13,6 +13,8 @@ body {
     padding: 20px;
 }
 
+
+
 .frame {
     width: 200px;
     height: 250px;
@@ -21,6 +23,8 @@ body {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0; /* Initially invisible */
+    animation: fadeIn 1s ease forwards; /* Animation duration of 1 second */
 }
 
 .frame img {
@@ -34,6 +38,19 @@ body {
     transform: scale(1.05);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
+
+/* Add fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Modal styles */
 .modal {
@@ -49,7 +66,7 @@ body {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: #e0fe2c;
     margin: 10% auto;
     padding: 20px;
     border-radius: 10px;

@@ -14,7 +14,7 @@ const framesData = {
         audioSrc: 'audio/audio3.mp3',
         transcript: 'This is the transcript for audio 3.'
     },
-    
+
     4: {
         audioSrc: 'audio/audio4.mp3',
         transcript: 'This is the transcript for audio 4.'
@@ -42,6 +42,21 @@ function openModal(frameId) {
         modal.style.display = 'block';
     }
 }
+
+
+// Function to fade in frames one by one
+function staggeredFadeIn() {
+    const frames = document.querySelectorAll('.frame');
+    frames.forEach((frame, index) => {
+        // Delay the animation for each frame
+        frame.style.animationDelay = `${index * 0.5}s`;
+    });
+}
+
+// Run the function when the page loads
+window.onload = staggeredFadeIn;
+
+
 
 // Function to close the modal
 function closeModal() {
