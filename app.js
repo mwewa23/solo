@@ -10,6 +10,15 @@ const framesData = {
         audioSrc: 'audio/audio2.mp3',
         transcript: 'This is the transcript for audio 2.'
     },
+    3: {
+        audioSrc: 'audio/audio3.mp3',
+        transcript: 'This is the transcript for audio 3.'
+    },
+    
+    4: {
+        audioSrc: 'audio/audio4.mp3',
+        transcript: 'This is the transcript for audio 4.'
+    }
     // Add more frames data as needed
 };
 
